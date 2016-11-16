@@ -1,0 +1,28 @@
+<ion-view title="Welcome to Heidelberg Hyperloop" id="page1">
+  <ion-content padding="true" scroll="false" class="has-header">
+    <form id="hyperLoop-form1" class="list">
+      <label class="item item-input" id="hyperLoop-input1">
+        <span class="input-label">From</span>
+        <button type="text" placeholder="" ng-click="location()" id="from" class="button button-assertive  button-block">Get your location </button>
+      </label>
+      <label class="item item-input item-select" id="hyperLoop-input2">
+        <span class="input-label">To</span>
+        <select>
+    	  <option>Munich</option>
+    	  <option selected>Berlin</option>
+    	  <option>Stuttgart</option>
+		</select>
+
+      </label>
+      <ion-item class="range range-positive" id="hyperLoop-range3" >Travellers
+        <input type="range" value={{traveller}} min="1" max="10" step="1" ng-model="traveller" id="travel">
+        {{traveller}}
+      </ion-item>
+      <ion-item class="range range-positive" id="hyperLoop-range5" >Luggage
+        <input type="range" value={{luggage}} min="0" max="5" step="1" ng-model="luggage" id="lug">
+        {{luggage}}
+      </ion-item>
+    </form>
+    <button ng-click="checkValues()" id="hyperLoop-button2" class="button button-assertive  button-block">Search </button>
+  </ion-content>
+</ion-view>
